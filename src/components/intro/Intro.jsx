@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 
-import Ityped from '../ityped/Ityped';
 import { init } from 'ityped';
 
 import './Intro.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useTranslation } from 'react-i18next';
 
-function Intro(changeLanguage) {
+function Intro() {
   const { t } = useTranslation();
   const textRef = useRef();
 
@@ -35,7 +34,6 @@ function Intro(changeLanguage) {
         <div className="wrapper">
           <h2>{t('home.oi')}</h2>
           <h1>Cristian Müller</h1>
-          {/* <Ityped changeLanguage={changeLanguage} /> */}
           <h3>
             {t('home.freelance')} <span ref={textRef}></span>
           </h3>

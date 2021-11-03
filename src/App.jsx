@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 
 import './global.scss';
 import './App.scss';
@@ -27,7 +26,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [userRepositoriesData, setUserRepositoriesData] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [changeLanguage, setChangeLanguage] = useState(false);
 
   const { i18n } = useTranslation();
 
@@ -56,17 +54,11 @@ function App() {
       <TopBar
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
-        changeLanguage={changeLanguage}
-        setChangeLanguage={setChangeLanguage}
         changeLanguageHandler={changeLanguageHandler}
       />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
-        <Intro
-          changeLanguage={changeLanguage}
-          setChangeLanguage={setChangeLanguage}
-          changeLanguageHandler={changeLanguageHandler}
-        />
+        <Intro />
         <Portfolio userRepositoriesData={userRepositoriesData} />
         <Works />
         <Testimonials />
