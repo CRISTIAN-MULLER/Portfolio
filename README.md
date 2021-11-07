@@ -1,3 +1,39 @@
+<p align="center">
+ <a href="#https://github.com/CRISTIAN-MULLER/Portfolio">Objetivo</a>
+ <a href="#roadmap">Roadmap</a> 
+ <a href="#tecnologias">Tecnologias</a>
+ <a href="#contribuicao">Contribuição</a>
+ <a href="#licenc-a">Licença</a>
+ <a href="#autor">Autor</a>
+</p>
+
+
+
+<h1 align="center">My Personal Portfolio</h1>
+
+Esse projeto tem o bjetivo de demonstrar em um único lugar, alguns dos projetos que desenvolvi durante minha trajetória como Desenvolvedor de Software, a idéia é reunir num único lugar informações de vários projetos e tecnoclogias que utlizei nesse periodo.  
+
+# Porquê cargas d'agua desenvolvi isso?
+Durante minha carreira senti que os desenvolvedores, principalmente aqueles que estao começando, nao sabem como mostrar seus projetos, e tambem existem vários locais onde você precisa mostrar ao mundo, tais como GitHub, BitBucket, Linkedin e etc..., manter sincronizado as informações de todos os locais é um grande desafio.
+
+
+# E a minha solução?
+Minha idéia com esse projeto é ter uma vitirine que integre tudo num só local:
+    .E se ao fazer o upload de um novo projeto no github ele aparecesse no seu portifólio automaticamente?.
+    .E se um colega seu postasse uma recomendação bem legal no Linkedin, não seria legal isso estar no seu portfólio?.
+    .E se um cliente postar algo bem legal e te marcar no post? bora mostrar isso.
+    .Tem um conjunto de Skils? bota lá tambem. 
+
+você pode por exemplo colocar sua formação no linkedin, sua experiencia profissional e isso tudo será sincronizado com uma seção no site do seu portifólio.
+
+
+# Tá, mas o que eu usei para criar essa maravilha da tecnologia? 
+Esse projeto foi desenvolvido Utilizando ReactJS , i18n para tradução automatizada (Insano) e tambem axios para consumir as Api's.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
