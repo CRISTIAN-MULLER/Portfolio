@@ -48,13 +48,14 @@
       .socialContainer {
         display: flex;
         flex-direction: column;
-        //align-items: center;
-
-        a {
-          color: $maincolor;
+        //align-items: center;        
+        
+        a, a:link, a:visited {          
           display: flex;
           align-items: center;
+          color: inherit; 
         }
+
         .social {
           margin-right: 5px;
           float: left;
@@ -138,6 +139,7 @@
   &.active {
     background-color: $maincolor;
     color: white;
+    
     .hamburguer {
       span {
         &:first-child {
@@ -153,6 +155,11 @@
           transform: rotate(-45deg);
         }
       }
+    }
+
+    > div > div > div > a {
+      
+      color: white;      
     }
   }
 }
