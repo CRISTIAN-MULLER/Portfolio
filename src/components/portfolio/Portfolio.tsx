@@ -1,49 +1,28 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 
 import './Portfolio.scss'
 import PortfolioList from '../portfolioList/PortfolioList'
 import { useTranslation } from 'react-i18next'
 
-type UserRepositoriesDataProps = {
-	id: string
-	name: string
-	owner: {
-		login: string
-	}
-	imageURL: string
-	topics: [string]
-	default_branch: string
-}
+import { UserDataContext } from '../../App'
 
-type UserRepositoriesProps = {
-	userRepositoriesData: UserRepositoriesDataProps[] | undefined
-}
+function Portfolio() {
+	const { userRepositoriesData } = useContext(UserDataContext)
 
-function Portfolio({ userRepositoriesData }: UserRepositoriesProps) {
 	const { t } = useTranslation()
 
-	const userData = userRepositoriesData?.map((item) => ({
-		id: item?.id,
-		name: item?.name.replace(/-/g, ' '),
-		ownerName: item?.owner.login,
-		imageURL: `https://raw.githubusercontent.com/${item?.owner.login}/${item?.name}/${item?.default_branch}/Tela.png`,
-		topics: [...item.topics],
-	}))
+	const [data, setData] = useState(userRepositoriesData)
 
-	const [data, setData] = useState(userData)
+	const topics = userRepositoriesData
+		.filter((item) => item.topics.length > 0)
+		.map((topic) =>
+			topic.topics.map((item) => {
+				return item
+			}),
+		)
+		.flat()
 
-	const topics = userData
-		? userData
-				.filter((item) => item.topics.length > 0)
-				.map((topic) =>
-					topic.topics.map((item) => {
-						return item
-					}),
-				)
-				.flat()
-		: null
-
-	const [selected, setSelected] = useState([''])
+	const [selected, setSelected] = useState<string[]>([])
 
 	const topicsWithoutDuplicates = [...new Set(topics)].map((item) => {
 		return { id: item, title: item }
@@ -51,21 +30,24 @@ function Portfolio({ userRepositoriesData }: UserRepositoriesProps) {
 
 	useEffect(() => {
 		if (selected.length > 0) {
-			const filteredData = selected
-				.map((topic) => {
-					const temp = userData
-						? userData.filter((item) => {
+			const filteredData = [
+				...new Set(
+					selected
+						.map((topic) => {
+							const temp = userRepositoriesData.filter((item) => {
 								return item.topics.includes(topic)
-						  })
-						: []
-					return temp
-				})
-				.flat()
-
+							})
+							return temp
+						})
+						.flat(),
+				),
+			]
 			setData(filteredData)
 			return
 		}
-		setData(userData)
+
+		setData(userRepositoriesData)
+		// eslint-disable-next-line
 	}, [selected])
 
 	return (
@@ -84,24 +66,15 @@ function Portfolio({ userRepositoriesData }: UserRepositoriesProps) {
 				))}
 			</ul>
 			{
-				<div className='container'>
-					{data ? (
-						data.map((item) => (
-							<div className='item' key={item.id}>
+				<div className='container style-2'>
+					{data.map((item) => (
+						<a href={`#${item.id}`} key={item.id}>
+							<div className='item'>
 								<img src={item.imageURL} alt='Logo' />
-								<h3> {item.name}</h3>
+								<h3> {item.title}</h3>
 							</div>
-						))
-					) : (
-						<></>
-					)}
-
-					{/* {data.map((d) => (
-          <div className="item">
-            <img src={d.img} alt="" />
-            <h3>{d.title}</h3>
-          </div>
-          ))} */}
+						</a>
+					))}
 				</div>
 			}
 		</div>

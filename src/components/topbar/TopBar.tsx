@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import './TopBar.scss'
 
@@ -8,18 +8,12 @@ import EmailIcon from '@mui/icons-material/Email'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
 import Flag from 'react-flagpack'
+import { UserDataContext } from '../../App'
 
-type TopBarProps = {
-	menuOpen: boolean,
-	setMenuOpen: (open: boolean) => void,
-	changeLanguageHandler: (lang: string) => void,
-}
+const Topbar: React.FC = () => {
+	const { menuOpen, setMenuOpen, changeLanguageHandler } =
+		useContext(UserDataContext)
 
-const Topbar: React.FC<TopBarProps> = ({
-	menuOpen,
-	setMenuOpen,
-	changeLanguageHandler,
-}) => {
 	return (
 		<div className={`topbar ${menuOpen && 'active'}`}>
 			<div className='wrapper'>

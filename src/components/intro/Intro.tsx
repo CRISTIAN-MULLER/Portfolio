@@ -16,14 +16,13 @@ const Intro: React.FC = () => {
 			`${t('home.desenvolvedorWeb')}`,
 		],
 		loop: false,
-		onLoopDone: () => console.log(`loop completed after 3 runs.`),
 	})
 
 	return (
 		<div className='intro' id='intro'>
 			<div className='left'>
 				<div className='imageContainer'>
-					<img src='/assets/man.png' alt='' />
+					<img src='/assets/foto.svg' alt='' />
 				</div>
 			</div>
 			<div className='right'>

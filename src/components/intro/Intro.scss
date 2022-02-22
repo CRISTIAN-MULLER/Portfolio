@@ -19,7 +19,7 @@
       border-radius: 50%;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
       float: right;
 
       @include mobile {
@@ -28,10 +28,10 @@
       }
 
       img {
-        height: 90%;
+        height: 45%;
 
         @include mobile {
-          height: 50%;
+          height: 25%;
         }
       }
     }

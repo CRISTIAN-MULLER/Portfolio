@@ -1,14 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import './Menu.scss'
 import { useTranslation } from 'react-i18next'
 
-type MenuProps = {
-	menuOpen: boolean
-	setMenuOpen: (open: boolean) => void
-}
+import { UserDataContext } from '../../App'
 
-const Menu: React.FC<MenuProps> = ({ menuOpen, setMenuOpen }) => {
+const Menu: React.FC = () => {
+	const { menuOpen, setMenuOpen } = useContext(UserDataContext)
 	const { t } = useTranslation()
 	return (
 		<div className={'menu ' + (menuOpen && 'active')}>
