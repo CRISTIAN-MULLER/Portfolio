@@ -6,7 +6,9 @@
  <a href="#about">Autor. </a>
 </p>
 
-<h1 id="objective">Meu Portfolio</h1>
+<h1 id="objective">Meu Portfolio (WIP)</h1>
+
+https://cristian-portfolio.herokuapp.com/
 
 Esse projeto tem o bjetivo de demonstrar em um único lugar, alguns dos projetos que desenvolvi durante minha trajetória como Desenvolvedor de Software, a idéia é reunir num único lugar informações de vários projetos e tecnoclogias que utlizei nesse periodo.  
 
@@ -39,6 +41,8 @@ Depois de clonar o repositório, você pode rodar no termial:
 
 Roda o app no modo de desenvolvimento com o nodemon.\
 Abra o Navegador no endereço [http://localhost:5500](http://localhost:5500).
+
+Se quiser ver rodando, acessa o endereço https://cristian-portfolio.herokuapp.com/
 
 
 <h1 id="about"> Quem sou?.</h1>
