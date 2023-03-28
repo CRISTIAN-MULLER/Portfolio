@@ -42,7 +42,7 @@ Depois de clonar o repositório, você pode rodar no termial:
 Roda o app no modo de desenvolvimento com o nodemon.\
 Abra o Navegador no endereço [http://localhost:5500](http://localhost:5500).
 
-Se quiser ver rodando, acessa o endereço https://cristian-portfolio.herokuapp.com/
+Se quiser ver rodando, acessa o endereço https://portfolio-kappa-dun.vercel.app/
 
 
 <h1 id="about"> Quem sou?.</h1>
