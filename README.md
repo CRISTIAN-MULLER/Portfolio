@@ -8,7 +8,7 @@
 
 <h1 id="objective">Meu Portfolio (WIP)</h1>
 
-[https://cristian-portfolio.herokuapp.com/](https://portfolio-kappa-dun.vercel.app/)
+[https://portfolio-kappa-dun.vercel.app/](https://portfolio-kappa-dun.vercel.app/)
 
 Esse projeto tem o bjetivo de demonstrar em um único lugar, alguns dos projetos que desenvolvi durante minha trajetória como Desenvolvedor de Software, a idéia é reunir num único lugar informações de vários projetos e tecnoclogias que utlizei nesse periodo.  
 
